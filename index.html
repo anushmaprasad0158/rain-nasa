@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Logo">
+    </div>
+    <div class="profile">
+      <img src="https://i.pravatar.cc/100" alt="profile">
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Topbar -->
+    <div class="topbar">
+      <h1>NASA Space Apps 2025</h1>
+      <div class="search">
+        <i>🔍</i>
+        <input type="text" placeholder="Enter City or Location">
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid">
+      <!-- Today Weather -->
+      <div class="card today-weather">
+        <h2>Today</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" alt="cloudy">
+        <h3 id="temperature">--°C</h3>
+        <p id="condition">Loading...</p>
+      </div>
+
+      <!-- Map -->
+      <div class="map"></div>
+
+      <!-- Precipitation Card -->
+      <div class="card">
+        <h2>Precipitation</h2>
+        <h3 id="precipitation">--%</h3>
+      </div>
+    </div>
+
+    <!-- Forecast Section -->
+    <h2 class="forecast-title">Weather Insights</h2>
+    <div class="forecast">
+      <div class="card">
+        <h3>7 Days Forecast</h3>
+        <canvas id="forecastChart" height="100"></canvas>
+      </div>
+      <div class="card">
+        <h3>Wind Speed</h3>
+        <h3 id="windspeed">-- km/h</h3>
+        <canvas id="windChart" height="100"></canvas>
+      </div>
+      <div class="card">
+        <h3>Air Quality</h3>
+        <h3 id="airquality">-- AQI</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
